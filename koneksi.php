@@ -1,9 +1,8 @@
 <?php
-	$dbhost = 'localhost'; // Isi nama hosting
-	$dbuser = 'root'; // Isi Nama User MySQL
-	$dbpass = ''; // Isi Password Database MySQL
-	$dbname = 'gis'; // Isi dengan nama Database
-	
-	$koneksi = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
-	mysql_select_db($dbname,$koneksi);
+
+$dbh = mysql_connect('mysql.idhostinger.com','u136898565_root','kelompok2010');
+	mysql_select_db('u136898565_gis');
+	if (!$dbh) {
+		die('Could not connect ');
+	}
 ?>
