@@ -2,9 +2,9 @@
 
 require ('koneksi.php');
 
-$sql = mysql_query("SELECT nama,lat,long from ibadah");
+$sql = mysql_query("SELECT nama,lat,longitude from ibadah");
 
-while ($row = mysql_fetch_assoc($sql)) 
+while ($row = mysql_fetch_array($sql)) 
 $cabang[] = $row;
 
 $json = json_encode($cabang);
